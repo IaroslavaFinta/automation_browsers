@@ -14,13 +14,13 @@ public class GoogleCleanAssertion {
         System.setProperty("webdriver.chrome.driver", "/Users/EvgenyShashkov/Downloads/chromedriver");
 
         WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
 
         driver.get("http://www.google.com");
 
         WebElement searchField = driver.findElement(By.name("q"));
 
         searchField.sendKeys("QA");
-
         searchField.submit();
 
         WebElement resultsStatsElement = driver.findElement(By.id("result-stats"));

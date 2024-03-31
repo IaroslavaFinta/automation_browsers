@@ -10,7 +10,7 @@ import static org.testng.AssertJUnit.assertTrue;
 public class GoogleEugene {
     public static void main(String[] args){
 
-        System.setProperty("webdriver.chrome.driver", "/Users/eshashko/Downloads/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/EvgenyShashkov/Downloads/chromedriver");
 
         WebDriver driver = new ChromeDriver();
 

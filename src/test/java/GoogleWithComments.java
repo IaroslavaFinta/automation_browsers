@@ -10,8 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 //This allows your program to use the `By` class, which makes it possible to locate a set of WebElements on the page.
 // This class has various static methods, like `By.className(String)
-public class Google {
-    public static void main(String[] args) {
+public class GoogleWithComments {
+    public static void main(String[] args) throws InterruptedException {
 
         //The line `public static void main(String[] args)` is the main method in Java, serving as the entry point for any Java application. Here's what it means:
         //1. `public`: This is an access modifier, meaning the method is accessible to all classes.
@@ -25,6 +25,8 @@ public class Google {
 
         // Create new instance of ChromeDriver
         WebDriver driver = new ChromeDriver();
+        //full screen
+        driver.manage().window().maximize();
 
         // Where are we going? Method GET
         driver.get("http://www.google.com");
@@ -47,6 +49,7 @@ public class Google {
         // Now submit the form
         element.submit();
 
+        Thread.sleep(5000);
         //Close the browser. Close the window.
         driver.quit();
     }
