@@ -28,6 +28,7 @@ public class GoogleCleanAssertion {
         wait.until(ExpectedConditions.visibilityOf(resultsStatsElement));
 
         String pageText = driver.getPageSource();
+        System.out.println(pageText);
         assertTrue(pageText.contains("Quality assurance"));
 
         System.out.println("Our test just passed");
