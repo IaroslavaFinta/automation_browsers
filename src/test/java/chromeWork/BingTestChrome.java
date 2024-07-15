@@ -1,9 +1,11 @@
+package chromeWork;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class WikiTestChrome {
+public class BingTestChrome {
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -11,7 +13,7 @@ public class WikiTestChrome {
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://www.wiki.com/");
+        driver.get("https://www.bing.com/");
         Thread.sleep(3000);
 
         WebElement searchField = driver.findElement(By.name("q"));
