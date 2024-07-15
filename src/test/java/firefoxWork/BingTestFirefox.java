@@ -3,15 +3,15 @@ package firefoxWork;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class BingTestSafari {
+public class BingTestFirefox {
 
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("webdriver.safari.driver", "/usr/bin/safaridriver");
+        System.setProperty("webdriver.gecko.driver", "/Users/Iaroslava/Downloads/geckodriver");
 
-        WebDriver driver = new SafariDriver();
+        WebDriver driver = new FirefoxDriver();
 
         driver.get("https://www.bing.com/");
         Thread.sleep(3000);
