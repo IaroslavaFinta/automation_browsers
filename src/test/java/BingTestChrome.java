@@ -3,7 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class BingTest {
+public class BingTestChrome {
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -18,8 +18,8 @@ public class BingTest {
 //        WebElement searchField = driver.findElement(By.cssSelector("#APjFqb"));
 //        WebElement searchField = driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea"));
         searchField.sendKeys("QA");
-        Thread.sleep(5000);
         searchField.submit();
+        Thread.sleep(5000);
 
         driver.quit();
 
