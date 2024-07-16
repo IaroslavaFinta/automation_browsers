@@ -13,15 +13,15 @@ public class WikiTestChrome {
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://www.wiki.com/");
-        Thread.sleep(3000);
+        driver.get("https://www.wikipedia.org/");
+        Thread.sleep(1000);
 
-        WebElement searchField = driver.findElement(By.name("q"));
-//        WebElement searchField = driver.findElement(By.cssSelector("#APjFqb"));
-//        WebElement searchField = driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea"));
+        WebElement searchField = driver.findElement(By.name("search"));
+//        WebElement searchField = driver.findElement(By.cssSelector("#searchform > div > div > div.cdx-text-input.cdx-text-input--has-start-icon.cdx-text-input--status-default.cdx-search-input__text-input > input"));
+//        WebElement searchField = driver.findElement(By.xpath("/html/body/div[1]/header/div[2]/div/div/div/form/div/div/div[1]/input"));
         searchField.sendKeys("QA");
         searchField.submit();
-        Thread.sleep(5000);
+        Thread.sleep(2000);
 
         driver.quit();
 

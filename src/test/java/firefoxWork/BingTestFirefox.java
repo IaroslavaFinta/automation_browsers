@@ -14,14 +14,14 @@ public class BingTestFirefox {
         WebDriver driver = new FirefoxDriver();
 
         driver.get("https://www.bing.com/");
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         WebElement searchField = driver.findElement(By.name("q"));
-//        WebElement searchField = driver.findElement(By.cssSelector("#APjFqb"));
-//        WebElement searchField = driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea"));
+//        WebElement searchField = driver.findElement(By.cssSelector("#sb_form_q"));
+//        WebElement searchField = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[3]/div[2]/form/div[1]/div/textarea"));
         searchField.sendKeys("QA");
         searchField.submit();
-        Thread.sleep(5000);
+        Thread.sleep(2000);
 
         driver.quit();
 

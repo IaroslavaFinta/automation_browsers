@@ -14,15 +14,16 @@ public class YahooTestChrome {
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.yahoo.com/");
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
-        WebElement searchField = driver.findElement(By.name("p"));
-//        WebElement searchField = driver.findElement(By.cssSelector("#APjFqb"));
+//        WebElement searchField = driver.findElement(By.name("p"));
+        WebElement searchField = driver.findElement(By.id("ybar-sbq"));
+//        WebElement searchField = driver.findElement(By.cssSelector("#ybar-sbq"));
 //        WebElement searchField = driver.findElement
-//                (By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea"));
+//                (By.xpath("/html/body/header/div/div/div/div/div/div[2]/div/div[1]/div[3]/form/input[1]"));
         searchField.sendKeys("QA");
         searchField.submit();
-        Thread.sleep(5000);
+        Thread.sleep(2000);
 
         driver.quit();
 
