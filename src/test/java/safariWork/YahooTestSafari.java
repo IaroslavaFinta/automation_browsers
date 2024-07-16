@@ -14,7 +14,6 @@ public class YahooTestSafari {
         WebDriver driver = new SafariDriver();
 
         driver.get("https://www.yahoo.com/");
-        Thread.sleep(1000);
 
 //        WebElement searchField = driver.findElement(By.name("p"));
         WebElement searchField = driver.findElement(By.id("ybar-sbq"));

@@ -9,7 +9,7 @@ public class BingTestFirefox {
 
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("webdriver.gecko.driver", "/Users/Iaroslava/Downloads/geckodriver");
+//        System.setProperty("webdriver.gecko.driver", "/Users/Iaroslava/Downloads/geckodriver");
 
         WebDriver driver = new FirefoxDriver();
 
