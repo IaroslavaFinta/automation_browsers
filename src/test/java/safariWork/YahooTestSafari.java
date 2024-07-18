@@ -22,10 +22,8 @@ public class YahooTestSafari {
 //                (By.xpath("/html/body/header/div/div/div/div/div/div[2]/div/div[1]/div[3]/form/input[1]"));
         searchField.sendKeys("QA");
         searchField.submit();
-        Thread.sleep(2000);
 
         driver.quit();
-
     }
 }
 

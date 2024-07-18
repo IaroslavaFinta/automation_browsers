@@ -14,16 +14,14 @@ public class GoogleTestSafari {
         WebDriver driver = new SafariDriver();
 
         driver.get("https://www.google.com/");
-        Thread.sleep(1000);
 
        WebElement searchField = driver.findElement(By.name("q"));
 //        WebElement searchField = driver.findElement(By.cssSelector("#APjFqb"));
 //        WebElement searchField = driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea"));
         searchField.sendKeys("QA");
         searchField.submit();
-        Thread.sleep(2000);
-        driver.quit();
 
+        driver.quit();
     }
 }
 

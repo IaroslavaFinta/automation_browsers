@@ -28,8 +28,6 @@ public class GoogleAnnotations {
             searchInput.sendKeys("QA Tester");
             searchInput.submit();
 
-            Thread.sleep(5000);
-
             String pageText = driver.getPageSource();
             assertTrue(pageText.contains("Quality assurance"));
 
