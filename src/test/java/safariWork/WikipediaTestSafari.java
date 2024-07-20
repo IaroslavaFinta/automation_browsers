@@ -7,7 +7,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import static org.junit.Assert.assertTrue;
 
-public class BingTestSafari {
+public class WikipediaTestSafari {
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -15,11 +15,11 @@ public class BingTestSafari {
 
         WebDriver driver = new SafariDriver();
 
-        driver.get("https://www.bing.com/");
+        driver.get("https://www.wikipedia.org/");
 
-        WebElement searchField = driver.findElement(By.name("q"));
-//        WebElement searchField = driver.findElement(By.cssSelector("#sb_form_q"));
-//        WebElement searchField = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[3]/div[2]/form/div[1]/div/textarea"));
+        WebElement searchField = driver.findElement(By.name("search"));
+//        WebElement searchField = driver.findElement(By.cssSelector("#searchform > div > div > div.cdx-text-input.cdx-text-input--has-start-icon.cdx-text-input--status-default.cdx-search-input__text-input > input"));
+//        WebElement searchField = driver.findElement(By.xpath("/html/body/div[1]/header/div[2]/div/div/div/form/div/div/div[1]/input"));
         searchField.sendKeys("QA");
         searchField.submit();
 

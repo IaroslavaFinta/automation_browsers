@@ -4,11 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.safari.SafariDriver;
 
 import static org.junit.Assert.assertTrue;
 
-public class WikiTestChrome {
+public class WikipediaTestChrome {
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -16,11 +15,11 @@ public class WikiTestChrome {
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://www.wiki.com/");
+        driver.get("https://www.wikipedia.org/");
 
-        WebElement searchField = driver.findElement(By.name("q"));
-//        WebElement searchField = driver.findElement(By.cssSelector("body > form > table > tbody > tr:nth-child(3) > td > div > input[type=text]:nth-child(1)"));
-//        WebElement searchField = driver.findElement(By.xpath("/html/body/form/table/tbody/tr[3]/td/div/input[1]"));
+        WebElement searchField = driver.findElement(By.name("search"));
+//        WebElement searchField = driver.findElement(By.cssSelector("#searchform > div > div > div.cdx-text-input.cdx-text-input--has-start-icon.cdx-text-input--status-default.cdx-search-input__text-input > input"));
+//        WebElement searchField = driver.findElement(By.xpath("/html/body/div[1]/header/div[2]/div/div/div/form/div/div/div[1]/input"));
         searchField.sendKeys("QA");
         searchField.submit();
 
@@ -30,6 +29,7 @@ public class WikiTestChrome {
         System.out.println("You found information related to QA testers");
 
         driver.quit();
+
     }
 }
 

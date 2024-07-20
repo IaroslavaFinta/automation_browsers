@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.safari.SafariDriver;
 
+import static org.junit.Assert.assertTrue;
+
 public class YahooTestSafari {
 
     public static void main(String[] args) throws InterruptedException {
@@ -22,6 +24,11 @@ public class YahooTestSafari {
 //                (By.xpath("/html/body/header/div/div/div/div/div/div[2]/div/div[1]/div[3]/form/input[1]"));
         searchField.sendKeys("QA");
         searchField.submit();
+
+        String pageText = driver.getPageSource();
+        assertTrue(pageText.contains("Quality assurance"));
+
+        System.out.println("You found information related to QA testers");
 
         driver.quit();
     }
